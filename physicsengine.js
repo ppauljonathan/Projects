@@ -1,5 +1,5 @@
 var a=document.getElementById("area");
-var c=document.getElementById("physicsObject"),t=1;
+var c=document.getElementsByClassName("physicsObject"),t=1;
 class physicsBody
 {
     constructor(x,y,m=1)
@@ -22,18 +22,18 @@ class physicsBody
     }
     flatTorus()
     {
-        if(this.x<0){this.x=a.clientWidth-c.clientWidth;}
-        else if(this.x>a.clientWidth-c.clientWidth){this.x=0;}
-        else if(this.y<0){this.y=a.clientHeight-c.clientHeight;}
-        else if(this.y>a.clientHeight-c.clientHeight){this.y=0;}
+        if(this.x<0){this.x=a.clientWidth-c[0].clientWidth;}
+        else if(this.x>a.clientWidth-c[0].clientWidth){this.x=0;}
+        else if(this.y<0){this.y=a.clientHeight-c[0].clientHeight;}
+        else if(this.y>a.clientHeight-c[0].clientHeight){this.y=0;}
     }
     posUpdate()
     {
         this.x+=this.v_x;
         this.y+=this.v_y;
         this.flatTorus();
-        c.style.left=`${this.x}px`;
-        c.style.top=`${this.y}px`;
+        c[0].style.left=`${this.x}px`;
+        c[0].style.top=`${this.y}px`;
     }
 }
 free=new physicsBody(30,30);
