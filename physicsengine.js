@@ -1,7 +1,7 @@
 var a=document.getElementById("area");
 var c=a.getContext("2d"),t=1;
 c.fillStyle="#fff";
-a.width=400;a.height=300;
+a.width=600;a.height=500;
 class physicsBody
 {
     constructor(x,y,m=1)
