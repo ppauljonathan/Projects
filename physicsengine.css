@@ -1,6 +1,5 @@
 #area{
 	background-color:#000;
-	width:50vw;height:100vh;
     position:absolute;
     top:0%;left:0%;
 }
@@ -28,7 +27,6 @@
 #down{left:33%;top:66%;}
 @media all and (orientation:portrait){
     #control-panel{width:100%;height:50%;top:50%;left:0%;}
-    #area{width:100%;height:50%;}
     .button{width:15vh;height:15vh;font-size:6vh;}
     #mover-panel{width:30vh;height:30vh;}
 }
