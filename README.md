@@ -1,2 +1,2 @@
 # Projects
-My pet projects(very simple nothing much to look at)
+My pet project(very simple nothing much to look at)
