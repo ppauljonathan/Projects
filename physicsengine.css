@@ -10,7 +10,7 @@
     position:absolute;
     top:0%;left:50%;
 }
-.physicsObject{
+#physicsObject{
     background-color:#aaa;
     width:10px;height:10px;
     position:absolute;

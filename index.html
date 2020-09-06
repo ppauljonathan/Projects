@@ -6,10 +6,10 @@
     </head>
     <body onkeydown="free.move(event.key)">
         <div id="area">
-            <div class="physicsObject"></div>
-            <div class="physicsObject"></div>
+            <div id="physicsObject"></div>
         </div>
         <div id="control-panel">
+            <div id="wall-toggle" class="button" onclick="switcheroo()">Walls</div>
             <div id="mover-panel">
                 <div class="button" id="left" onclick="free.move('ArrowLeft')" ontouchstart="free.move('ArrowLeft')">&lt==</div>
                 <div class="button" id="right" onclick="free.move('ArrowRight')" ontouchstart="free.move('ArrowRight')">==&gt</div>
