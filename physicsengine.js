@@ -27,6 +27,8 @@ class physicsBody
          {this.v_x+=1/this.m;}
          else if(k==" ")
          {this.v_x=0;this.v_y=0;}
+         else if(k=="w"||k=="W")
+         {switcheroo();}
     }
     flatTorus()
     {
