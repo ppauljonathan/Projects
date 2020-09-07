@@ -1,6 +1,20 @@
 var a=document.getElementById("area");
 var c=document.getElementById("physicsObject"),t=1;
-var walls=0;
+var walls=0,mySound = new sound("Ping Pong Hit.waw");
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+      this.sound.play();
+    }
+    this.stop = function(){
+      this.sound.pause();
+    }
+  }
 function switcheroo()
 {
     if(walls==0)
@@ -41,6 +55,7 @@ class physicsBody
     {
         if(this.x<0||this.x>a.clientWidth-c.clientWidth){this.v_x=0-this.v_x;}
         else if(this.y<0||this.y>a.clientHeight-c.clientHeight){this.v_y=0-this.v_y;}
+        mySound.play();
     }
     posUpdate()
     {
