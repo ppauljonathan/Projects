@@ -32,10 +32,10 @@ class physicsBody
     }
     flatTorus()
     {
-        if(this.x<0){this.x=a.clientWidth-c.clientWidth;}
-        else if(this.x>a.clientWidth-c.clientWidth){this.x=0;}
-        else if(this.y<0){this.y=a.clientHeight-c.clientHeight;}
-        else if(this.y>a.clientHeight-c.clientHeight){this.y=0;}
+        if(this.x<0){this.x=a.clientWidth-c.clientWidth+this.x;}
+        else if(this.x>a.clientWidth-c.clientWidth){this.x=a.clientWidth-c.clientWidth-this.x;}
+        else if(this.y<0){this.y=a.clientHeight-c.clientHeight+this.y;}
+        else if(this.y>a.clientHeight-c.clientHeight){this.y=a.clientHeight-c.clientHeight-this.y;}
     }
     wall()
     {
